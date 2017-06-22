@@ -1,0 +1,2 @@
+# Selenium-Listeners
+This repository will contain research work related to selenium listeners. This research will be helpful for selenium users to reduce redundant annotations. Use of TestNG listeners and optimize TestNG annotation redundant effort. For example, @BeforeTest annotation used in test source files and most of the time code inside the @BeforeTest remains same among all test files within one project suite. Our research work will use TestNG listeners and we will analyze how it will improve the code maintainability cost.
