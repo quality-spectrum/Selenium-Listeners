@@ -1,0 +1,9 @@
+test-output/
+.project
+.settings/
+.classpath
+*.class
+.metadata/
+.idea/
+workspace.xml
+target/

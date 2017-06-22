@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Listeners_Framework" >
+    <listeners>
+        <listener class-name="TestListener"></listener>
+    </listeners>
+
+    <test name="login_logout">
+
+    <classes>
+        <class name="login">
+            <methods>
+                <include name="sign_in" />
+                <include name="sign_out" />
+            </methods>
+        </class>
+    </classes>
+    </test>
+
+    <test name="cart_verification">
+
+        <classes>
+            <class name="cart">
+                <methods>
+                    <include name="cart_empty_OnStart" />
+                    <include name="cart_empty_warning" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->

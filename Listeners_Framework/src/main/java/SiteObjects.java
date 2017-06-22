@@ -53,13 +53,24 @@ class SiteObjects{
             @FindBy(css = ".account>span")
     })
     private WebElement lblUserName;
-
-
+    @FindAll({
+            @FindBy (className = "logout"),
+            @FindBy(css = ".logout")
+    })
+    private WebElement lnkSignOut;
+    @FindAll({
+            @FindBy (className = "ajax_cart_no_product"),
+            @FindBy(css = ".ajax_cart_no_product")
+    })
+    private WebElement lblCartValue;
+    @FindAll({
+            @FindBy(css = ".alert.alert-warning")
+    })
+    private WebElement lblWarningMsg_000;
     public void vClickSignInLink()
     {
         Utils.vClickObj(lnkSignIn);
     }
-
     public void vTypeEmail(String strEmail)
     {
         Utils.vSetText(tbEmail,strEmail);
@@ -76,6 +87,17 @@ class SiteObjects{
     {
         return lblUserName;
     }
+    public void vClickSignOutLink()
+    {
+        Utils.vClickObj(lnkSignOut);
+    }
+    public String strGetSignInText()
+    {
+        return lnkSignIn.getText();
+    }
+    public String strGetCartValue(){ return lblCartValue.getText();}
+    public void vClickCartMenu(){ Utils.vClickObj(lblCartValue);}
+    public String strGetCartEmptyWarnning(){ return lblWarningMsg_000.getText();}
 
 }
 /*====================================================================================================================*/
